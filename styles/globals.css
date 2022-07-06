@@ -5,7 +5,14 @@
 @layer base {
   html,
   body,
-  div#__next {
+  div#__next,
+  main,
+  main > div:first-of-type {
     height: 100%;
+  }
+
+  div#__next {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
 }
