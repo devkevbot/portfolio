@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 
 const Home: NextPage = () => (
-  <div className="bg-slate-900 py-5 px-10 text-white md:py-10">
+  <div className="bg-slate-900 py-5 px-10 md:py-10">
     <div className="mx-auto flex w-full flex-col gap-8 md:w-3/5 md:gap-16">
       <div className="max-w-prose self-center text-center">
         <h1 className="mb-2 text-4xl font-bold">Kevin Jerome</h1>

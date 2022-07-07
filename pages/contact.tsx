@@ -2,7 +2,7 @@ import Image from "next/image";
 import ExternalLink from "../components/external-link";
 
 const Contact = () => (
-  <div className="bg-slate-900 py-10 px-10 text-white">
+  <div className="bg-slate-900 py-10 px-10 ">
     <h1 className="mb-8 text-center text-2xl font-bold">Contact</h1>
     <div className="flex flex-col justify-center gap-8 text-xl font-semibold md:flex-row">
       <div className="flex items-center gap-4 bg-slate-800 pr-4">

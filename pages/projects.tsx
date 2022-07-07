@@ -48,7 +48,7 @@ const Projects = ({
   repositories,
   repositoriesLoaded,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
-  <div className="bg-slate-900 py-10 px-10 text-white">
+  <div className="bg-slate-900 py-10 px-10">
     <h1 className="mb-8 text-center text-2xl font-bold">Recent projects</h1>
 
     {!repositoriesLoaded && (

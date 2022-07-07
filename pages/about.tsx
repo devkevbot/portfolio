@@ -43,7 +43,7 @@ const TimelineItemCTA = ({ href, text }: { href: string; text: string }) => (
   <a
     href={href}
     target="_blank"
-    className="inline-block w-full rounded bg-sky-700 px-4 py-1.5 text-center text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-sky-600 hover:shadow-lg focus:bg-sky-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-800 active:shadow-lg md:w-auto md:text-left"
+    className="inline-block w-full rounded bg-sky-700 px-4 py-1.5 text-center text-xs font-medium uppercase leading-tight shadow-md transition duration-150 ease-in-out hover:bg-sky-600 hover:shadow-lg focus:bg-sky-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-800 active:shadow-lg md:w-auto md:text-left"
     rel="noreferrer"
   >
     {text}
@@ -87,7 +87,7 @@ const experienceItems = [
 ];
 
 const About: NextPage = () => (
-  <div className="flex flex-col gap-12 bg-slate-900 py-10 px-10 text-white md:flex-row">
+  <div className="flex flex-col gap-12 bg-slate-900 py-10 px-10 md:flex-row">
     <div className="mx-auto">
       <h1 className="mb-8 text-2xl font-bold">About me</h1>
       <div className="max-w-prose space-y-4">
