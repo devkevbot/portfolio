@@ -33,9 +33,12 @@ export async function getStaticProps() {
     ),
   );
 
+  const repositoriesLoaded = repositories.every(repository => repository.id);
+
   return {
     props: {
       repositories,
+      repositoriesLoaded,
     },
     revalidate: 60 * 60,
   };
@@ -43,44 +46,55 @@ export async function getStaticProps() {
 
 const Projects = ({
   repositories,
+  repositoriesLoaded,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <div className="bg-slate-900 py-10 px-10 text-white">
     <h1 className="mb-8 text-center text-2xl font-bold">Recent projects</h1>
-    <ul className="mx-auto flex w-full flex-col items-center gap-8 md:w-1/2">
-      {repositories.map(repository => (
-        <div
-          key={repository.name}
-          className="flex w-full flex-col gap-4 rounded-2xl bg-slate-800 px-8 py-4"
-        >
-          <span className="text-xl font-bold">
-            <ExternalLink href={repository.html_url} label={repository.name} />
-          </span>
-          <span>{repository.description}</span>
-          <div className="hidden flex-wrap gap-2 md:flex">
-            {repository.topics.map(topic => (
-              <span
-                key={topic}
-                className="rounded-2xl bg-blue-900 px-4 py-1 text-sky-300"
-              >
-                {topic}
-              </span>
-            ))}
-          </div>
-          {repository.language && (
-            <div className="flex items-center gap-2">
-              <span
-                className="mt-1 h-4 w-4 rounded-full"
-                style={{
-                  backgroundColor:
-                    languageToColor.get(repository.language) ?? "#FFF",
-                }}
+
+    {!repositoriesLoaded && (
+      <div className="text-center">Check back soon for projects!</div>
+    )}
+
+    {repositoriesLoaded && (
+      <ul className="mx-auto flex w-full flex-col items-center gap-8 md:w-1/2">
+        {repositories.map(repository => (
+          <div
+            key={repository.name}
+            className="flex w-full flex-col gap-4 rounded-2xl bg-slate-800 px-8 py-4"
+          >
+            <span className="text-xl font-bold">
+              <ExternalLink
+                href={repository.html_url}
+                label={repository.name}
               />
-              <span>{repository.language}</span>
+            </span>
+            <span>{repository.description}</span>
+            <div className="hidden flex-wrap gap-2 md:flex">
+              {repository.topics.map(topic => (
+                <span
+                  key={topic}
+                  className="rounded-2xl bg-blue-900 px-4 py-1 text-sky-300"
+                >
+                  {topic}
+                </span>
+              ))}
             </div>
-          )}
-        </div>
-      ))}
-    </ul>
+            {repository.language && (
+              <div className="flex items-center gap-2">
+                <span
+                  className="mt-1 h-4 w-4 rounded-full"
+                  style={{
+                    backgroundColor:
+                      languageToColor.get(repository.language) ?? "#FFF",
+                  }}
+                />
+                <span>{repository.language}</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </ul>
+    )}
   </div>
 );
 
