@@ -29,7 +29,7 @@ const Navbar = () => {
   const navListRef = useRef<HTMLUListElement>(null);
 
   return (
-    <nav className="flex flex-wrap justify-end border-b-2 border-white bg-slate-900 p-4 font-semibold uppercase text-white">
+    <nav className="flex flex-wrap justify-end bg-slate-900 p-4 font-semibold uppercase text-white">
       <button
         className="mb-2 pr-2 text-3xl md:hidden"
         type="button"
