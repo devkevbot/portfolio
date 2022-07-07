@@ -2,7 +2,7 @@ import Head from "next/head";
 
 const Metatags = () => (
   <Head>
-    <title>Kevin Jerome&apos;s Portfolio</title>
+    <title>Kevin Jerome | Full-stack software developer</title>
     <meta name="title" content="Kevin Jerome" />
     <meta
       name="description"
