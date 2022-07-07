@@ -30,10 +30,10 @@ const Home: NextPage = () => (
         </h1>
         <p>
           Want to know more about me? Where did I go to school? Where have I
-          worked? Find out by{" "}
+          worked? Find out{" "}
           <Link href="/about">
             <button type="button" className="text-sky-400 hover:text-sky-300">
-              reading more about me.
+              more.
             </button>
           </Link>
         </p>

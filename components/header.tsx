@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import ExternalLink from "./external-link";
 
 const internalLinks = [
   {
@@ -15,22 +17,18 @@ const internalLinks = [
     name: "Projects",
     href: "/projects",
   },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
 ];
 
 const internalLinkIsActive = (activePathname: string, targetHref: string) =>
   activePathname === targetHref;
 
 const DesktopNavItems = ({ pathname }: { pathname: string }) => (
-  <ul className="flex gap-4">
+  <ul className="flex items-center gap-4">
     {internalLinks.map(link => (
       <li key={link.name}>
         <Link href={link.href}>
           <button
-            className={`mb-2 px-4 py-1 text-lg hover:text-sky-300 ${
+            className={`px-4 text-lg hover:text-sky-300 ${
               internalLinkIsActive(pathname, link.href)
                 ? "border-sky-400 text-sky-400"
                 : "border-white text-white"
@@ -42,6 +40,29 @@ const DesktopNavItems = ({ pathname }: { pathname: string }) => (
         </Link>
       </li>
     ))}
+    <div className="flex items-center gap-4 bg-slate-800 pr-4 normal-case">
+      <Image
+        src="/github-logo.png"
+        alt="GitHub logo"
+        layout="fixed"
+        width="32"
+        height="32"
+      />
+      <ExternalLink href="https://github.com/devkevbot" label="GitHub" />
+    </div>
+    <div className="flex items-center gap-4 bg-slate-800 pr-4 normal-case">
+      <Image
+        src="/linkedin-logo.png"
+        alt="LinkedIn logo"
+        layout="fixed"
+        width="32"
+        height="32"
+      />
+      <ExternalLink
+        href="https://www.linkedin.com/in/kevinjerome97/"
+        label="LinkedIn"
+      />
+    </div>
   </ul>
 );
 
@@ -82,6 +103,29 @@ const MobileNavItems = ({
           </Link>
         </li>
       ))}
+      <div className="flex w-full items-center gap-4 bg-slate-800 pr-4 text-3xl normal-case">
+        <Image
+          src="/github-logo.png"
+          alt="GitHub logo"
+          layout="fixed"
+          width="64"
+          height="64"
+        />
+        <ExternalLink href="https://github.com/devkevbot" label="GitHub" />
+      </div>
+      <div className="flex w-full items-center gap-4 bg-slate-800 pr-4 text-3xl normal-case">
+        <Image
+          src="/linkedin-logo.png"
+          alt="LinkedIn logo"
+          layout="fixed"
+          width="64"
+          height="64"
+        />
+        <ExternalLink
+          href="https://www.linkedin.com/in/kevinjerome97/"
+          label="LinkedIn"
+        />
+      </div>
     </ul>
   </nav>
 );
