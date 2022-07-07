@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import ExternalLink from "../components/external-link";
 
 const Home: NextPage = () => (
   <div className="bg-slate-900 py-5 px-10 md:py-10">
@@ -11,37 +12,7 @@ const Home: NextPage = () => (
 
       <section>
         <h1 className="mb-2 flex items-center gap-2 text-2xl font-bold">
-          For the curious
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="brain"
-            className="h-7 w-7"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <path
-              fill="currentColor"
-              d="M208 0c-29.9 0-54.7 20.5-61.8 48.2-.8 0-1.4-.2-2.2-.2-35.3 0-64 28.7-64 64 0 4.8.6 9.5 1.7 14C52.5 138 32 166.6 32 200c0 12.6 3.2 24.3 8.3 34.9C16.3 248.7 0 274.3 0 304c0 33.3 20.4 61.9 49.4 73.9-.9 4.6-1.4 9.3-1.4 14.1 0 39.8 32.2 72 72 72 4.1 0 8.1-.5 12-1.2 9.6 28.5 36.2 49.2 68 49.2 39.8 0 72-32.2 72-72V64c0-35.3-28.7-64-64-64zm368 304c0-29.7-16.3-55.3-40.3-69.1 5.2-10.6 8.3-22.3 8.3-34.9 0-33.4-20.5-62-49.7-74 1-4.5 1.7-9.2 1.7-14 0-35.3-28.7-64-64-64-.8 0-1.5.2-2.2.2C422.7 20.5 397.9 0 368 0c-35.3 0-64 28.6-64 64v376c0 39.8 32.2 72 72 72 31.8 0 58.4-20.7 68-49.2 3.9.7 7.9 1.2 12 1.2 39.8 0 72-32.2 72-72 0-4.8-.5-9.5-1.4-14.1 29-12 49.4-40.6 49.4-73.9z"
-            />
-          </svg>
-        </h1>
-        <p>
-          Want to know more about me? Where did I go to school? Where have I
-          worked? Find out{" "}
-          <Link href="/about">
-            <button type="button" className="text-sky-400 hover:text-sky-300">
-              more.
-            </button>
-          </Link>
-        </p>
-      </section>
-
-      <section>
-        <h1 className="mb-2 flex items-center gap-2 text-2xl font-bold">
-          Technologies
+          Curiosity
           <svg
             aria-hidden="true"
             focusable="false"
@@ -78,6 +49,37 @@ const Home: NextPage = () => (
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
+            data-icon="brain"
+            className="h-7 w-7"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+          >
+            <path
+              fill="currentColor"
+              d="M208 0c-29.9 0-54.7 20.5-61.8 48.2-.8 0-1.4-.2-2.2-.2-35.3 0-64 28.7-64 64 0 4.8.6 9.5 1.7 14C52.5 138 32 166.6 32 200c0 12.6 3.2 24.3 8.3 34.9C16.3 248.7 0 274.3 0 304c0 33.3 20.4 61.9 49.4 73.9-.9 4.6-1.4 9.3-1.4 14.1 0 39.8 32.2 72 72 72 4.1 0 8.1-.5 12-1.2 9.6 28.5 36.2 49.2 68 49.2 39.8 0 72-32.2 72-72V64c0-35.3-28.7-64-64-64zm368 304c0-29.7-16.3-55.3-40.3-69.1 5.2-10.6 8.3-22.3 8.3-34.9 0-33.4-20.5-62-49.7-74 1-4.5 1.7-9.2 1.7-14 0-35.3-28.7-64-64-64-.8 0-1.5.2-2.2.2C422.7 20.5 397.9 0 368 0c-35.3 0-64 28.6-64 64v376c0 39.8 32.2 72 72 72 31.8 0 58.4-20.7 68-49.2 3.9.7 7.9 1.2 12 1.2 39.8 0 72-32.2 72-72 0-4.8-.5-9.5-1.4-14.1 29-12 49.4-40.6 49.4-73.9z"
+            />
+          </svg>
+        </h1>
+        <p>
+          From the nitty-gritty of IP networking and microcontrollers to
+          complex, scalable software, I have experience in a bit of everything.
+          Want to hear more about my story?{" "}
+          <Link href="/about">
+            <button type="button" className="text-sky-400 hover:text-sky-300">
+              Continue reading.
+            </button>
+          </Link>
+        </p>
+      </section>
+
+      <section>
+        <h1 className="mb-2 flex items-center gap-2 text-2xl font-bold">
+          Knowledge
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
             data-icon="graduation-cap"
             className="h-8 w-8"
             role="img"
@@ -91,15 +93,13 @@ const Home: NextPage = () => (
           </svg>
         </h1>
         <p>
-          I am college-educated with a degree in Computer Engineering and 2+
-          years of software work experience. I have a proven history of getting
-          things done.
-          <Link href="/contact">
-            <button type="button" className="text-sky-400 hover:text-sky-300">
-              Let&apos;s get in touch
-            </button>
-          </Link>{" "}
-          and see what we can create.
+          I am university-educated with an undergraduate degree in Computer
+          Engineering. From my 2+ years of real-world software experience, I
+          have a proven history of getting stuff done. Interested?{" "}
+          <ExternalLink
+            href="https://www.linkedin.com/in/kevinjerome97/"
+            label="Let's get in touch."
+          />
         </p>
       </section>
     </div>
