@@ -1,10 +1,10 @@
-import Navbar from "./navbar";
+import Header from "./header";
 import Footer from "./footer";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Layout = ({ children }: { children: any }) => (
   <>
-    <Navbar />
+    <Header />
     <main>{children}</main>
     <Footer />
   </>
