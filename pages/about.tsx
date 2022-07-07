@@ -92,7 +92,7 @@ const About: NextPage = () => (
       <h1 className="mb-8 text-2xl font-bold">About me</h1>
       <div className="max-w-prose space-y-4">
         <p>
-          I am a software developer from{" "}
+          I am 24-year-old software developer from{" "}
           <ExternalLink
             href="https://goo.gl/maps/9p4e8HLXBwfhyiBM9"
             label="Vancouver, Canada."
@@ -120,8 +120,8 @@ const About: NextPage = () => (
         <p>
           Outside of work, I have a few key interests. I own a healthy backlog
           of tech, business, and lifestyle books that I <em>should</em> get
-          through...well, eventually. I also live, breathe, and talk about video
-          games and Esports with close friends. You can also catch me
+          through...well, eventually. I live, breathe, and talk about video
+          games and Esports with anyone who will listen. You can also catch me
           obsessively adding tracks to my Spotify playlist so that I never miss
           a new release from my favourite metal artist,{" "}
           <ExternalLink href="https://spiritbox.com/" label="Spiritbox." />
