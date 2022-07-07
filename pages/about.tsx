@@ -5,14 +5,16 @@ import ExternalLink from "../components/external-link";
 const TimelineItemTitle = ({
   jobTitle,
   companyName,
+  companyWebsite,
 }: {
   jobTitle: string;
   companyName: string;
+  companyWebsite: string;
 }) => (
   <div className="flex-start flex items-center">
     <div className="-ml-2 mr-3 -mt-2 hidden h-4 w-4 items-center justify-center rounded-full bg-sky-400 md:flex" />
     <h4 className="-mt-3 text-lg font-semibold ">
-      {jobTitle} at {companyName}
+      {jobTitle} at <ExternalLink href={companyWebsite} label={companyName} />
     </h4>
   </div>
 );
@@ -37,17 +39,6 @@ const TimelineItemBody = ({ jobDuties }: { jobDuties: string[] }) => (
       ))}
     </ul>
   </div>
-);
-
-const TimelineItemCTA = ({ href, text }: { href: string; text: string }) => (
-  <a
-    href={href}
-    target="_blank"
-    className="inline-block w-full rounded bg-sky-700 px-4 py-1.5 text-center text-xs font-medium uppercase leading-tight shadow-md transition duration-150 ease-in-out hover:bg-sky-600 hover:shadow-lg focus:bg-sky-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-800 active:shadow-lg md:w-auto md:text-left"
-    rel="noreferrer"
-  >
-    {text}
-  </a>
 );
 
 const experienceItems = [
@@ -143,14 +134,11 @@ const About: NextPage = () => (
             <TimelineItemTitle
               jobTitle={item.jobTitle}
               companyName={item.companyName}
+              companyWebsite={item.companyWebsite}
             />
             <TimelineItemContent>
               <TimelineItemDate employmentDate={item.employmentDate} />
               <TimelineItemBody jobDuties={item.jobDuties} />
-              <TimelineItemCTA
-                href={item.companyWebsite}
-                text="Visit company website"
-              />
             </TimelineItemContent>
           </li>
         ))}
