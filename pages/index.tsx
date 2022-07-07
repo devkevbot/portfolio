@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Home: NextPage = () => (
   <div className="bg-slate-900 py-5 px-10 md:py-10">
-    <div className="mx-auto flex w-full flex-col gap-8 md:w-3/5 md:gap-16">
+    <div className="mx-auto flex flex-col gap-8 md:max-w-prose md:gap-16">
       <div className="max-w-prose self-center text-center">
         <h1 className="mb-2 text-4xl font-bold">Kevin Jerome</h1>
         <p className="text-xl md:text-3xl">Full-stack software developer</p>
       </div>
 
-      <section className="max-w-prose">
+      <section>
         <h1 className="mb-2 flex items-center gap-2 text-2xl font-bold">
           For the curious
           <svg
@@ -39,7 +39,7 @@ const Home: NextPage = () => (
         </p>
       </section>
 
-      <section className="max-w-prose md:self-end">
+      <section>
         <h1 className="mb-2 flex items-center gap-2 text-2xl font-bold">
           Technologies
           <svg
@@ -71,7 +71,7 @@ const Home: NextPage = () => (
         </p>
       </section>
 
-      <section className="max-w-prose">
+      <section>
         <h1 className="mb-2 flex items-center gap-2 text-2xl font-bold">
           Experience
           <svg
